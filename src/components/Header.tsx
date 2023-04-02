@@ -1,6 +1,9 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Logo from '../images/logo.svg';
+import Burger from './Burger';
+
+const links: string[] = ['Home', 'About Us', 'Features', 'Solution'];
 
 const Header: React.FunctionComponent = (): React.ReactElement => {
 	return (
@@ -11,31 +14,18 @@ const Header: React.FunctionComponent = (): React.ReactElement => {
 					Hoo<span className="text-[#5CE1E6]">Bank</span>
 				</h2>
 			</div>
-			<div className="flex gap-14">
-				<NavLink
-					className="text-white/70 text-base/[20.8px] hover:text-white"
-					to={'/'}
-				>
-					Home
-				</NavLink>
-				<NavLink
-					className="text-white/70 text-base/[20.8px] hover:text-white"
-					to={'#'}
-				>
-					About Us
-				</NavLink>
-				<NavLink
-					className="text-white/70 text-base/[20.8px] hover:text-white"
-					to={'#'}
-				>
-					Features
-				</NavLink>
-				<NavLink
-					className="text-white/70 text-base/[20.8px] hover:text-white"
-					to={'#'}
-				>
-					Solution
-				</NavLink>
+			<div className="lg:flex hidden gap-14">
+				{links.map((link: string, idx: number) => {
+					return (
+						<NavLink
+							key={idx}
+							className="text-white/70 text-base/[20.8px] hover:text-white"
+							to={link}
+						>
+							{link}
+						</NavLink>
+					);
+				})}
 			</div>
 		</div>
 	);
