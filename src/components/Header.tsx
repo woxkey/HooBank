@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Logo from '../images/logo.svg';
-import Burger from './Burger';
 
 const links: string[] = ['Home', 'About Us', 'Features', 'Solution'];
 
@@ -20,7 +19,7 @@ const Header: React.FunctionComponent = (): React.ReactElement => {
 						<NavLink
 							key={idx}
 							className="text-white/70 text-base/[20.8px] hover:text-white"
-							to={link}
+							to={'#'}
 						>
 							{link}
 						</NavLink>

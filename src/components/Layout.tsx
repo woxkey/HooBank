@@ -4,7 +4,7 @@ import Header from './Header';
 
 const Layout: React.FunctionComponent = (): React.ReactElement => {
 	return (
-		<div className="container  mx-auto  px-4">
+		<div className="container  mx-auto  px-10">
 			<Header />
 			<Outlet />
 		</div>
